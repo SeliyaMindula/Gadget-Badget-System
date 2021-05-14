@@ -67,13 +67,39 @@ function validateDeliveryForm() {
 	if ($("#ReceiverPhoneNo").val().trim() == "") {
 		return "Insert Receiver Phone No.";
 	}
+	if (!validatePhone($("#ReceiverPhoneNo").val().trim())) {
+			return "Insert Valid Phone Number.";
+		}
+	
+
 	
 	//Mail------------------------
 	if ($("#ReceiverMail").val().trim() == "") {
 		return "Insert Receiver Mail.";
 	}
+	var email = $("#ReceiverMail").val().trim();
+		if (!validateEmail(email)) {
+		return "Insert Valid Email.";
+		}
 	return true;
+	
 }
+
+
+function validatePhone(phone) 
+{
+    var re = /^(\91-|\91|0)?\d{9}$/;
+    return re.test(phone);
+}
+
+function validateEmail(email) 
+{
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+
+
 
 function onDeliverySaveComplete(response, status) {
 	if (status == "success") {

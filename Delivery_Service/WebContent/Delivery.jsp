@@ -22,7 +22,7 @@
 						<br> 
 						Receiver Phone No:<input id="ReceiverPhoneNo" name="ReceiverPhoneNo" type="text" class="form-control form-control-sm">
 						 <br> 
-						Receiver Mail:<input id="ReceiverMail" name="ReceiverMail" type="text" class="form-control form-control-sm"> 
+						Receiver Mail:<input id="ReceiverMail" name="ReceiverMail" type="email" class="form-control form-control-sm"> 
 						<br> 
 						<input id="btnSave" name="btnSave" type="button" value="Save" class="btn btn-primary">
 						<input type="hidden" id="hidDeliveryIDSave" name="hidDeliveryIDSave" value="">
